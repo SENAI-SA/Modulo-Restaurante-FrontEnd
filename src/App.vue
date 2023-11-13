@@ -9,11 +9,15 @@ import MenuRouter from './components/MenuRouter.vue'
 </script>
 
 <template>
+  
   <MenuRouter />
-
-
-
+<div class="container">
   <RouterView />
+
+</div>
+
+
+
 </template>
 
 <style>
