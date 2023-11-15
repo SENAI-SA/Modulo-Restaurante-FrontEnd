@@ -15,7 +15,7 @@
 					<RouterLink class="nav-link" to="/cardapio">Cadastrar Cardápios</RouterLink>
 				</li>
 				<li class="nav-item">
-					<RouterLink class="nav-link" to="/?">Opção Extra?</RouterLink>
+					<RouterLink class="nav-link" to="/listar">Listar Cardapio</RouterLink>
 				</li>
 				<li class="nav-item">
 					<!--<a class="nav-link" role="button" @click="logout">Logout</a>-->

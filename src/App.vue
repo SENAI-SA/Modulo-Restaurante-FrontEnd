@@ -10,14 +10,17 @@ import MenuRouter from './components/MenuRouter.vue'
 
 <template>
   <MenuRouter />
-
-
+<div class="container">
 
   <RouterView />
+
+</div>
+
+
 </template>
 
 <style>
-html {
+html, body {
 
   background-image: url("assets/variedade-plana-com-deliciosa-comida-brasileira.jpg");
 }
