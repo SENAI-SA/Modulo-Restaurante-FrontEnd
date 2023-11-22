@@ -37,7 +37,7 @@
     name: 'Cardapio',
     data() {
        return {
-         cardapio: {} as Cardapio,
+         cardapio: {restauranteDTO: {idrestaurante: 1, endereco: {}}} as Cardapio,
        }
     },
     methods: {

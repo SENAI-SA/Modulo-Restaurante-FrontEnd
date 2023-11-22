@@ -34,7 +34,6 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="card" style="background-color: brown;">
 				<div class="card-body">
 					<div class="endereco">
@@ -91,8 +90,6 @@
 								<input type="text" class="form-control" id="inputCity" v-model="restaurante.endereco.numero">
 							</div>
 						</div>
-
-
 					</div>
 				</div>
 			</div>
@@ -115,7 +112,7 @@ export default defineComponent({
 	},
 	methods: {
 		async cadastrarRestaurante() {
-			await http.post("/restaurante", this.restaurante);
+			await http.post("/restaurante", {restauranteDTO: this.restaurante});
 			this.$emit("aoSalvarRestaurante");
 		},
 		async alterandoRestaurante() {

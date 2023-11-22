@@ -48,13 +48,23 @@ import { defineComponent, type PropType } from 'vue';
 import type Cardapio from '@/interfaces/Cardapio';
 import http from '@/http';
 import Modal from './Modal.vue';
+import type Endereco from '@/interfaces/Endereco';
+import type Restaurante from '@/interfaces/Restaurante';
 
 
 export default defineComponent({
     name: "ListaCardapios",
     data() {
         return {
-            cardapios: [] as Cardapio[],
+            cardapios: [{
+                idcardapio: 1,
+                nomeItem: 'pastel',
+                descricao: 'gostoso',
+                preco: 10.00,
+                tempoPreparo: 10,
+                caminhoFoto: '.'
+
+            }] as Cardapio[],
             produto: {} as Cardapio
         };
     },
@@ -70,6 +80,7 @@ export default defineComponent({
         },
         editarCardapio(cardapio: Cardapio) {
             this.produto = cardapio;
+            this.produto.restauranteDTO = {endereco:{} as Endereco, idrestaurante: 1} as Restaurante
         }
     },
     emits: ["aoExcluirCardapio", "aoAlterarCardapio"],
