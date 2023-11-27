@@ -59,7 +59,7 @@ export default defineComponent({
         };
     },
     async mounted() {
-        const response = await http.get("/cardapio");
+        const response = await http.get("/cardapio/1");
         this.cardapios = response.data;
     },
     methods: {
