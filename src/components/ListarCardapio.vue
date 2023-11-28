@@ -5,9 +5,9 @@
               <th scope="col">Id</th>
               <th scope="col">Nome</th>
               <th scope="col">Descricao</th>
-              <th scope="col">Preco</th>
+              <th scope="col">Preço</th>
               <th scope="col">Tempo</th>
-              <th scope="col">Foto</th>
+              <!--<th scope="col">Foto</th> -->
               <th scope="col">Editar</th>
               <th scope="col">Deletar</th>
           </tr>
@@ -17,9 +17,9 @@
               <th scope="row">{{ cardapio.idcardapio }}</th>
               <td>{{ cardapio.nomeItem }}</td>
               <td>{{ cardapio.descricao }}</td>
-              <td>{{ cardapio.preco }}</td>
+              <td> R${{ cardapio.preco }}</td>
               <td>{{ cardapio.tempoPreparo }}</td>
-              <td>{{ cardapio.caminhoFoto }}</td>
+             <!-- <td>{{ cardapio.caminhoFoto }}</td>-->
               <td>
                   <button type="button" class="btn btn-danger" @click="editarCardapio(cardapio)" data-bs-toggle="modal" data-bs-target="#idModal">
                     <i class="fa-solid fa-pencil" style="color: #ffffff;"></i>
@@ -69,7 +69,7 @@ export default defineComponent({
         };
     },
     async mounted() {
-        const response = await http.get("/cardapio");
+        const response = await http.get("/cardapio/1");
         this.cardapios = response.data;
     },
     methods: {

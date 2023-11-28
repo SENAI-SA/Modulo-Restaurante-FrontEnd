@@ -18,10 +18,12 @@
              <label for="tempoPreparo" class="form-label">Tempo de Preparo (em minutos)</label>
              <input type="number" class="form-control" id="tempoPreparo" v-model="cardapio.tempoPreparo">
            </div>
+           <!--
            <div class="mb-3">
              <label for="caminhoFoto" class="form-label">Caminho da Foto</label>
              <input type="text" class="form-control" id="caminhoFoto" v-model="cardapio.caminhoFoto">
            </div>
+           -->
            <button type="submit" class="btn btn-primary">{{descricaoBotao}}</button>
          </div>
        </div>
